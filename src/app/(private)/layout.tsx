@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { Header } from "@/components/header";
+import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: "UniPlan | Seu planner universitário",
+  title: "UniPlan | Dashboard",
   description: "Seu planner universitário",
 };
 
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
