@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";
 
-export default function Login() {
+export default function Register() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
       <div className="w-full max-w-2xl flex flex-col items-center justify-center gap-5 px-4">
@@ -20,6 +20,10 @@ export default function Login() {
         <Card className="w-full">
           <CardContent className="flex flex-col gap-5">
             <div className="flex flex-col gap-2">
+              <Label htmlFor="name">Nome completo</Label>
+              <Input id="name" type="text" />
+            </div>
+            <div className="flex flex-col gap-2">
               <Label htmlFor="email">Email</Label>
               <Input id="email" type="email" />
             </div>
@@ -27,21 +31,18 @@ export default function Login() {
               <Label htmlFor="password">Senha</Label>
               <Input id="password" type="password" />
             </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Checkbox id="rememberPassword" className="cursor-pointer" />
-                <Label htmlFor="rememberPassword" className="cursor-pointer">
-                  Lembrar da conta
-                </Label>
-              </div>
-              <Button variant="link">
-                <Link href="#" className="text-indigo-500">
-                  Esqueceu a senha?
-                </Link>
-              </Button>
+            <div className="flex flex-col gap-2">
+              <Label htmlFor="confirmPassword">Confirmar senha</Label>
+              <Input id="confirmPassword" type="confirmPassword" />
+            </div>
+            <div className="flex items-center gap-2">
+              <Checkbox id="rememberPassword" className="cursor-pointer" />
+              <Label htmlFor="rememberPassword" className="cursor-pointer">
+                Lembrar da conta
+              </Label>
             </div>
             <Button variant="default" className="cursor-pointer">
-              Entrar
+              Criar conta
             </Button>
             <div className="w-full flex items-center justify-center gap-5">
               <div className="w-full flex-1 h-px bg-zinc-300"></div>
@@ -62,9 +63,9 @@ export default function Login() {
               </div>
             </div>
             <Button variant="link">
-              <Link href="#">
-                Ainda não possui uma conta?
-                <span className="text-indigo-500"> Cadastre-se</span>
+              <Link href="/login">
+                Já possui uma conta?
+                <span className="text-indigo-500"> Faça login</span>
               </Link>
             </Button>
           </CardContent>
