@@ -43,6 +43,24 @@ export default function Login() {
             <Button variant="default" className="cursor-pointer">
               Entrar
             </Button>
+            <div className="w-full flex items-center justify-center gap-5">
+              <div className="w-full flex-1 h-px bg-zinc-300"></div>
+              <span className="text-sm flex-1 text-center text-zinc-500">
+                Ou continue com
+              </span>
+              <div className="w-full flex-1 h-px bg-zinc-300"></div>
+            </div>
+            <div className="flex items-center justify-center gap-5">
+              <div className="flex flex-1 items-center justify-center px-6 py-3 border-1 border-zinc-300 rounded-lg cursor-pointer hover:bg-zinc-100 hover:scale-110 transition-all duration-500 w-full max-w-36">
+                <FaGoogle size={26} />
+              </div>
+              <div className="flex flex-1 items-center justify-center px-6 py-3 border-1 border-zinc-300 rounded-lg cursor-pointer hover:bg-zinc-100 hover:scale-110 transition-all duration-500 w-full max-w-36">
+                <FaGithub size={26} />
+              </div>
+              <div className="flex flex-1 items-center justify-center px-6 py-3 border-1 border-zinc-300 rounded-lg cursor-pointer hover:bg-zinc-100 hover:scale-110 transition-all duration-500 w-full max-w-36">
+                <FaLinkedin size={26} />
+              </div>
+            </div>
             <Button variant="link">
               <Link href="#">
                 Ainda não possui uma conta?
