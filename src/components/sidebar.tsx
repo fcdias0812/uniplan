@@ -26,13 +26,18 @@ export function Sidebar() {
         </SheetTrigger>
         <SheetContent side="left" className="px-5 py-5 flex flex-col gap-5">
           <DialogTitle className="mb-5">UniPlan | Menu</DialogTitle>
-          <div className="flex gap-2 items-center w-full mb-5">
+          <Link
+            href="/settings"
+            className="flex gap-2 items-center w-full mb-5"
+          >
             <div className="w-10 h-10 bg-black rounded-full"></div>
-            <div className="flex flex-col text-sm font-medium">
-              <span>Fabrício Dias</span>
-              <span>dias.fabricio0812@gmail.com</span>
-            </div>
-          </div>
+            <SheetClose className="flex flex-col items-start text-sm font-medium">
+              <span className="cursor-pointer">Fabrício Dias</span>
+              <span className="cursor-pointer">
+                dias.fabricio0812@gmail.com
+              </span>
+            </SheetClose>
+          </Link>
           <div className="h-full flex flex-col items-start justify-between">
             <div className="flex flex-col gap-5 w-full">
               <MenuLink href="/dashboard" icon={House} label="Dashboard" />
